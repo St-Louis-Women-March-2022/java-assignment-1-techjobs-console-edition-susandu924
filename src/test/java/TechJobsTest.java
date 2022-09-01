@@ -64,7 +64,7 @@ public class TechJobsTest {
     @Test
     public void testCaseInsensitiveSearch() throws IOException {
         String input = "0\n3\nnew YORk\nx";
-        String output = runProgramWithInput(input);
+        String output = runProgramWithInput(input).replace("\r\n", "\n");
         String expected = getFileContents("src/test/resources/testCaseInsensitiveSearch.txt");
         assertEquals(expected, output);
     }

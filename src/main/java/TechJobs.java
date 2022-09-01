@@ -10,7 +10,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -112,7 +112,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -120,6 +120,52 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        for (HashMap<String, String> job : someJobs) {
+
+            System.out.println("\n"+ "*****");
+
+            for (Map.Entry<String, String> entryDetail : job.entrySet()) {
+                System.out.println(entryDetail.getKey() + ": " + entryDetail.getValue());
+            }
+            System.out.println("*****");
+        }
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        }
     }
+
+//    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+//
+//         for (HashMap<String, String> selectedJob : someJobs) {
+//             String asteriks = "*****";
+//             System.out.println("\n" + asteriks);
+//
+//             for (Map.Entry<String, String> entry : selectedJob.entrySet()) { //loop through hashmap and print entry set
+//                 String key = entry.getKey();
+//                 String value = entry.getValue();
+//
+//                 System.out.println(key + ": " + value);
+//                 //assign astericks to a variable and then have one outside of the loop and one at the after the loop
+//             }
+//
+//             System.out.println(asteriks);
+//         }
+//         if (someJobs.isEmpty()) {
+//            System.out.print("No Results");
+//        }
+//    }
+
 }
+//      Complete printJobs method taken directly from the book! NOT MY notes, this is what they want
+//      1) Iterate over an ArrayList of jobs. Each job is a HashMap. While you can get each item, using known keys,
+//      create a nested loop to loop over each HashMap.
+//      2) Print out jobs in precise format.
+//      3) If there are no results, it should print "No Results"
+//        Test this method before moving on to next step!
+//      4) Save changes
+//      5) Run the TechJobs class
+//      6) Select 1 to list jobs, then 0 to list them all
+//      7) Make sure printout matches exactly
+//      8) Test that prints descriptive message if no jobs found by selecting 0 to search and then 3 to search location
+//      Enter location not in data (Cancun). Message should display
+//trying to push need a file
