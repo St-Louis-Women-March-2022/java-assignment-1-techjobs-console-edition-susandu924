@@ -122,7 +122,7 @@ public class TechJobs {
 
         for (HashMap<String, String> job : someJobs) {
 
-            System.out.println("\n*****");
+            System.out.println("\n"+ "*****");
 
             for (Map.Entry<String, String> entryDetail : job.entrySet()) {
                 System.out.println(entryDetail.getKey() + ": " + entryDetail.getValue());
@@ -130,9 +130,30 @@ public class TechJobs {
             System.out.println("*****");
         }
         if (someJobs.isEmpty()) {
-            System.out.println("No results");
+            System.out.print("No Results");
         }
     }
+
+//    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+//
+//         for (HashMap<String, String> selectedJob : someJobs) {
+//             String asteriks = "*****";
+//             System.out.println("\n" + asteriks);
+//
+//             for (Map.Entry<String, String> entry : selectedJob.entrySet()) { //loop through hashmap and print entry set
+//                 String key = entry.getKey();
+//                 String value = entry.getValue();
+//
+//                 System.out.println(key + ": " + value);
+//                 //assign astericks to a variable and then have one outside of the loop and one at the after the loop
+//             }
+//
+//             System.out.println(asteriks);
+//         }
+//         if (someJobs.isEmpty()) {
+//            System.out.print("No Results");
+//        }
+//    }
 
 }
 //      Complete printJobs method taken directly from the book! NOT MY notes, this is what they want

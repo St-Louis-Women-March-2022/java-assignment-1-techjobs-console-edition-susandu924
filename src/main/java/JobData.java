@@ -37,10 +37,12 @@ public class JobData {
             if (!values.contains(aValue)) {
                 values.add(aValue);
             }
+            allJobs.sort((Comparator<? super HashMap<String, String>>) values);
+
         }
 
         // Bonus mission: sort the results
-        Collections.sort(values);
+
 
         return values;
     }
